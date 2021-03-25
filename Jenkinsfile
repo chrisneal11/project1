@@ -3,8 +3,8 @@
 pipeline {
    
    environment {
-      imagename = 'chrisneal11/project1'
-      registry = 'chrisneal11/project1'
+      imagename = 'chrisneal11/project2'
+      registry = 'chrisneal11/projecti2'
       registryCredential = 'dockerhub'
       dockerImage = ''
   } 
@@ -35,7 +35,7 @@ pipeline {
             }
         }
 // Deploy the Docker Image
-        stage(‘Deploy_Image’) {
+        stage('Deploy_Image') {
           steps {
              script {
                 docker.withRegistry( '', registryCredential ) {
@@ -51,7 +51,7 @@ pipeline {
             }
         }
 // Run the new Docker container
-        stage('Deploy the Tomcat Docker Container') {
+        stage('Deploy the Docker Container') {
             steps {
                 sh "docker-compose up -d"
             }
