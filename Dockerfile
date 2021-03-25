@@ -5,4 +5,4 @@ COPY single-module/target/single-module-project.jar /single-module-project.jar
 
 EXPOSE 8888
 
-CMD ["java", "-jar", "/demo.jar"]
+CMD ["java", "-jar", "/single-module-project.jar"]
