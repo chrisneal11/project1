@@ -1,6 +1,6 @@
 web:
 
    image: chrisneal11/project2:$BUILD_NUMBER
-   restart: always
+//   restart: always
    ports:
     - "8888:8888"
